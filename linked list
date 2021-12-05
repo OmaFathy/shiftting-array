@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+#define ll long long int
+using namespace std;
+//ربنا أكرم من أي حد
+//Jerry&Tom
+//O_SOFTWARE
+//هو انا هحل؟انتو بتوعي وانا بتعاكوو يتهدوني يهدكو
+void omar(){
+ios::sync_with_stdio(0);
+cin.tie(0);
+
+}
+    struct node 
+  //  | 1 | o-----> دي نود
+   
+{
+    int data; //النود بتتكون من الداتا والادريس بتاعت الداتا الي بعدها
+    struct node*next;
+    // | data | address
+};
+int main()
+{
+
+    int choice=1;// دي الي هتخليني اخزن علي مزاج اليوزر بقي
+
+ struct node* head,*newnode,*temp; //مل نسخ بوينتر لل
+ head=0;  //| head|--address the first element in linked list  -> | data | address
+ while(choice)
+{
+newnode= new node();//  واحطها فالنيو نود يمعلمnode بعمل نسخه من الاستراكت
+
+ cout<<"enter the data:\n";//بقول لليوزر حط الداتا يعمنا
+ cin>>newnode->data;// بخزنها(خلصانه يجدعان والله العظيم)
+ newnode->next;// بنتقل لمكان الادريس عشان اخش علي العنصر الي بعده
+ if(head==0) //لو فالاول اول عنصر خالص الهيد بتاعه بصفر فكلو بيتسااواا
+ {
+    head=temp=newnode;
+ }
+ else
+    {//غير كدا بخلي التيمب بقي الي هي اللنسخه الي هتتقعد تتنقل
+        temp->next=newnode;//اخلي الادريس يشاور علي النيو نود
+ temp=newnode;// والتيمب نفسه يشاور علي النيو نود كعنصر بقي
+
+ }
+
+ cout<<"do you want to continuo(0/1)?\n";
+ cin>>choice;
+
+ }
+  temp=head;//برجعه لاول عنصر عشان الطباعه
+ while(temp!=0)
+ {
+     cout<<temp->data<<" ";
+     temp=temp->next;
+ }
+
+return 0;
+
+}
